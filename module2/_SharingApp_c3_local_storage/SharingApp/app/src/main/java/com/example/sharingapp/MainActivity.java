@@ -26,7 +26,13 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = getIntent(); // Get intent from LoginActivity
         user_id = intent.getStringExtra("user_id");
-
+        if (user_id == null) {
+            // Something went wrong → return to login
+            Intent loginIntent = new Intent(this, LoginActivity.class);
+            startActivity(loginIntent);
+            finish();
+            return;
+        }
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

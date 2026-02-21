@@ -84,6 +84,25 @@ public class ItemList extends Observable {
             }
         }
         return selected_items;
+//        ArrayList<Item> selected_items = new ArrayList<>();
+//
+//        if (items == null || user_id == null) {
+//            return selected_items;
+//        }
+//
+//        for (Item i : items) {
+//            if (i == null) continue;
+//
+//            String ownerId = i.getOwnerId();
+//
+//            if (ownerId != null && ownerId.equals(user_id)) {
+//                selected_items.add(i);
+//            }
+//        }
+//
+//        return selected_items;
+
+
     }
 
     // Used by SearchItemsActivity
